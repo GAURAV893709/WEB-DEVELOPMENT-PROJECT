@@ -1,0 +1,40 @@
+using System;
+using System.Windows.Forms;
+
+namespace PersonalPortfolioInfo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnDisplay_Click(object sender, EventArgs e)
+        {
+            string name = txtName.Text;
+            string profession = txtProfession.Text;
+            string email = txtEmail.Text;
+            string phone = txtPhone.Text;
+            string hobby = txtHobby.Text;
+
+            string message = $"--- Personal Portfolio ---\n" +
+                             $"Name: {name}\n" +
+                             $"Profession: {profession}\n" +
+                             $"Email ID: {email}\n" +
+                             $"Phone Number: {phone}\n" +
+                             $"Hobby: {hobby}";
+
+            MessageBox.Show(message, "Portfolio Information");
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtName.Clear();
+            txtProfession.Clear();
+            txtEmail.Clear();
+            txtPhone.Clear();
+            txtHobby.Clear();
+        }
+    }
+}
